@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Josué Florián</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Cabecera de la página -->
+    <div id="header-container"></div>
+
+    <!-- Contenido principal -->
+    <main>
+        <section class="intro">
+            <h2>Introducción</h2>
+            <p>¡Hola! Soy Josué Florián, tengo 20 años y resido en Ventanilla. Actualmente, me encuentro cursando el sexto ciclo de la carrera de Ingeniería Informática en la Universidad Peruana Cayetano Heredia.</p>
+        </section>
+
+        <section class="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Desde el inicio de mis estudios, he desarrollado un profundo interés en el desarrollo de software, área en la que busco especializarme más adelante tanto en mis estudios como en mi vida profesional.</p>
+            <p>Formo parte de Innovalab, lo que me ha permitido adquirir experiencia práctica y mejorar mis habilidades en programación. Poseo conocimientos en varios lenguajes de programación, tales como:</p>
+            <ul>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>C#</li>
+            </ul>
+            <p>Además, tengo experiencia en el uso de herramientas como Unity y Blender, lo que me permite abordar proyectos de desarrollo de software y aplicaciones interactivas.</p>
+        </section>
+
+        <section class="experiencia">
+            <h2>Experiencia</h2>
+            <p>Gracias a mi participación en Innovalab, he podido trabajar en proyectos reales, desarrollando aplicaciones interactivas y mejorando constantemente mis habilidades técnicas. Estoy comprometido con mi crecimiento profesional y siempre busco nuevas oportunidades para aprender y aplicar mis conocimientos en el campo de la tecnología.</p>
+        </section>
+
+        <section class="objetivos">
+            <h2>Objetivos Profesionales</h2>
+            <p>Mis objetivos a corto plazo son especializarme en desarrollo de software, contribuir a proyectos innovadores y continuar mi aprendizaje en áreas como la inteligencia artificial y la realidad aumentada.</p>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <div id="footer-container"></div>
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Florián</title>
+    <link rel="stylesheet" href="css\styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="intro">
+            <br>
+            <p>Bienvenido a mi página personal, creada como parte dne un proyecto para la clase de Sistemas de Información.</p>
+        </section>
+
+        <section class="motivational-section">
+            <div class="photo-and-quote">
+                <div class="photo-container">
+                    <img id="my-photo" src="/images/pfp.png" alt="Mi foto" class="personal-photo" >
+                </div>
+                <div class="quote-container">
+                    <blockquote class="motivational-quote">
+                        "If I must fall, I will rise each time a better man."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <div class="about">
+            <h2>Sobre mí</h2>
+            <p>A continuación, se muestra un listado de apartados sobre mí:</p>
+            <ul>
+                <li><a href="yo.html" class="custom-link">Más sobre mí</a></li>
+                <li><a href="proyectos.html" class="custom-link">Proyectos</a></li>
+                <li><a href="certificados.html" class="custom-link">Certificados</a></li>
+                <li><a href="contact.html" class="custom-link">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Apartado de Testimonios -->
+        <section class="testimonials-section">
+            <h2>Testimonios</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"Trabajar con Florián fue una experiencia maravillosa. Su profesionalismo y atención al detalle son incomparables."</p>
+                    <span>- Juan Pérez, CEO de Tech Solutions</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Su capacidad para resolver problemas complejos con soluciones simples es sorprendente. Lo recomiendo ampliamente."</p>
+                    <span>- María López, Gerente de Proyectos</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Siempre dispuesto a ayudar, Florián es un excelente colaborador. Estoy muy contento de haber trabajado con él."</p>
+                    <span>- Carlos García, Consultor de TI</span>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="certificates-section">
+            <h2>Certificados</h2>
+            <div class="certificates-container">
+            <div class="certificate">
+                <p>Certificado en Desarrollo Web</p>
+                <span>Emitido por: Universidad de la Web</span>
+            </div>
+            <div class="certificate">
+                <p>Certificado en Programación en Python</p>
+                <span>Emitido por: Academia de Programación</span>
+            </div>
+            <div class="certificate">
+                <p>Certificado en Gestión de Proyectos</p>
+                <span>Emitido por: Instituto de Gestión</span>
+            </div>
+            </div>
+        </section>
+        <section class="projects-section">
+            <h2>Proyectos</h2>
+            <div class="projects-container">
+            <div class="project">
+                <h3>Proyecto 1: Sistema de Gestión</h3>
+                <p>Descripción: Un sistema de gestión para pequeñas empresas.</p>
+                <a href="proyecto1.html" class="custom-link">Ver más</a>
+            </div>
+            <div class="project">
+                <h3>Proyecto 2: Aplicación de Tareas</h3>
+                <p>Descripción: Una aplicación para gestionar tareas diarias.</p>
+                <a href="proyecto2.html" class="custom-link">Ver más</a>
+            </div>
+            <div class="project">
+                <h3>Proyecto 3: Sitio Web Personal</h3>
+                <p>Descripción: Mi sitio web personal para mostrar mi portafolio.</p>
+                <a href="proyecto3.html" class="custom-link">Ver más</a>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer dinámico -->
+    <div id="footer-container"></div>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header dinámicamente
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+
+        // Cargar el footer dinámicamente
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

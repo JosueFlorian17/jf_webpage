@@ -1,0 +1,98 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:#79c9f9;
+}
+main{
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    flex-grow: 1;
+    margin: 50px auto;
+    padding: 2% 4%;
+    border-radius: 8px;
+}
+/* HEADER*/
+
+.header-content{
+    background-color: #243c4a;
+    color: white;
+    padding: 1%;
+    display:flex;
+}
+
+h2{
+    font-size: (1.2rem, 2vw, 2.2rem);
+    font-weight: bold;
+    color: #008b8b;
+}
+
+.return-button{
+    width: 3%;
+    min-width: 30px;
+}
+
+
+.photo-and-quote{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0;
+}
+
+.photo-container{
+    border-radius: 50%;
+}
+
+.motivational-quote{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+
+
+.personal-photo{
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+.testimonials-section{
+    padding: 2%;
+    text-align: center;
+}
+.testimonials-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.testimonial{
+   font-style: italic;
+   background-color: #ffffff;
+   border-radius: 20px;
+   box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+   padding: 2%;
+
+}
+.testimonial span{
+    color: #008b8b;
+    font-weight: bold;
+}
+
+/* FOOTER*/
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    padding: 1%;
+    text-align: center;
+}
+
+
+.social-icon{
+    width: 3%;
+    height: auto;
+    margin: 0.5%;
+    min-width: 30px;
+}   

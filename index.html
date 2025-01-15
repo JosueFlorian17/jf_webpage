@@ -29,51 +29,46 @@
             </div>
         </section>
 
-        <div class="about">
-            <h2>Sobre mí</h2>
-            <p>A continuación, se muestra un listado de apartados sobre mí:</p>
-            <ul>
-                <li><a href="yo.html" class="custom-link">Más sobre mí</a></li>
-                <li><a href="proyectos.html" class="custom-link">Proyectos</a></li>
-                <li><a href="certificados.html" class="custom-link">Certificados</a></li>
-                <li><a href="contact.html" class="custom-link">Contacto</a></li>
-            </ul>
-        </div>
-
-        <!-- Apartado de Testimonios -->
-        <section class="testimonials-section">
-            <h2>Testimonios</h2>
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <p>"Trabajar con Florián fue una experiencia maravillosa. Su profesionalismo y atención al detalle son incomparables."</p>
-                    <span>- Juan Pérez, CEO de Tech Solutions</span>
-                </div>
-                <div class="testimonial">
-                    <p>"Su capacidad para resolver problemas complejos con soluciones simples es sorprendente. Lo recomiendo ampliamente."</p>
-                    <span>- María López, Gerente de Proyectos</span>
-                </div>
-                <div class="testimonial">
-                    <p>"Siempre dispuesto a ayudar, Florián es un excelente colaborador. Estoy muy contento de haber trabajado con él."</p>
-                    <span>- Carlos García, Consultor de TI</span>
-                </div>
-            </div>
+        <section class="intro">
+            <h2>Introducción</h2>
+            <p>¡Hola! Soy Josué Florián, tengo 20 años y resido en Ventanilla. Actualmente, me encuentro cursando el sexto ciclo de la carrera de Ingeniería Informática en la Universidad Peruana Cayetano Heredia.</p>
         </section>
+
+        <section class="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>Desde el inicio de mis estudios, he desarrollado un profundo interés en el desarrollo de software, área en la que busco especializarme más adelante tanto en mis estudios como en mi vida profesional.</p>
+            <p>Formo parte de Innovalab, lo que me ha permitido adquirir experiencia práctica y mejorar mis habilidades en programación. Poseo conocimientos en varios lenguajes de programación, tales como:</p>
+            <ul>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>C#</li>
+            </ul>
+            <p>Además, tengo experiencia en el uso de herramientas como Unity y Blender, lo que me permite abordar proyectos de desarrollo de software y aplicaciones interactivas.</p>
+        </section>
+
+        <section class="experiencia">
+            <h2>Experiencia</h2>
+            <p>Gracias a mi participación en Innovalab, he podido trabajar en proyectos reales, desarrollando aplicaciones interactivas y mejorando constantemente mis habilidades técnicas. Estoy comprometido con mi crecimiento profesional y siempre busco nuevas oportunidades para aprender y aplicar mis conocimientos en el campo de la tecnología.</p>
+        </section>
+
+        <section class="objetivos">
+            <h2>Objetivos Profesionales</h2>
+            <p>Mis objetivos a corto plazo son especializarme en desarrollo de software, contribuir a proyectos innovadores y continuar mi aprendizaje en áreas como la inteligencia artificial y la realidad aumentada.</p>
+        </section>
+
+
 
 
         <section class="certificates-section">
             <h2>Certificados</h2>
-            <div class="certificates-container">
-            <div class="certificate">
-                <p>Certificado en Desarrollo Web</p>
-                <span>Emitido por: Universidad de la Web</span>
-            </div>
-            <div class="certificate">
-                <p>Certificado en Programación en Python</p>
-                <span>Emitido por: Academia de Programación</span>
-            </div>
-            <div class="certificate">
-                <p>Certificado en Gestión de Proyectos</p>
-                <span>Emitido por: Instituto de Gestión</span>
+
+            <ul class="certificates-list">
+
+                <li class="certificate">CERTIFICADO DE DESARROLLO WEB</li>
+                <li class="certificate">CERTIFICADO DE PROGRAMACIÓN EN PYTHON</li>
+                <li class="certificate">Certificado en Gestión de Proyectos</li>
+                <li class="certificate">Certificado en Gestión de Proyectos 3</li>
+            </ul>
             </div>
             </div>
         </section>
@@ -97,22 +92,44 @@
             </div>
             </div>
         </section>
+
+
+
+
+        
+        <section class="testimonials-section">
+            <h2>Testimonios</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"Trabajar con Florián fue una experiencia maravillosa. Su profesionalismo y atención al detalle son incomparables."</p>
+                    <span>- Juan Pérez, CEO de Tech Solutions</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Su capacidad para resolver problemas complejos con soluciones simples es sorprendente. Lo recomiendo ampliamente."</p>
+                    <span>- María López, Gerente de Proyectos</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Siempre dispuesto a ayudar, Florián es un excelente colaborador. Estoy muy contento de haber trabajado con él."</p>
+                    <span>- Carlos García, Consultor de TI</span>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer dinámico -->
+
     <div id="footer-container"></div>
 
-    <!-- Enlace al archivo JavaScript -->
+
     <script src="script.js"></script>
     <script>
-        // Cargar el header dinámicamente
+
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-container').innerHTML = data;
             });
 
-        // Cargar el footer dinámicamente
+
         fetch('footer.html')
             .then(response => response.text())
             .then(data => {

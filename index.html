@@ -57,17 +57,82 @@
         </section>
 
 
+        <div id="customAlert" class="modal">
+            <div class="modal-content">
+              <iframe id="modalIframe" src="" width="640" height="480" style="border-radius: 20px; border: none;" allow="autoplay"></iframe>
+              <button id="closeModal" class="close-button">Cerrar</button>
+            </div>
+          </div>
+
 
 
         <section class="certificates-section">
             <h2>Certificados</h2>
 
             <ul class="certificates-list">
+                <li onclick="showModal('https://drive.google.com/file/d/1fJeA8Pv1GtM2G4NpU0n9x3f95PkWD-YD/preview')">
+                    <div class="certificate">Scrum Fundamentals Certified 
+                        <div class="logos">
+                            <img src="images/facebook.png" alt="Logo 2">
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="Career_Essentials_Software_Dev" onclick="showModal('https://drive.google.com/file/d/1r9jO26nmyzCk-ulD5cTIfpsJ68r_eG8T/previewx')">
+                    <div class="certificate">Career Essentials in Software Development
+                        <div class="logos">
+                            <img src="images/linkedin.png" alt="Logo 1">
+                            <img src="images/facebook.png" alt="Logo 2">
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="Productivity_IA_Microsoft_LinkedIn">
+                    <div class="certificate">Desarrolla tus habilidades de productividad con IA generativa
+                        <div class="logos" style="bottom: 5px;">
+                            <img src="images/linkedin-white.png" alt="Logo 1">
+                            <img src="images/microsoft.png" alt="Logo 2">
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="DevOps_Professional_Certificate">
+                    <div class="certificate">DevOps Professional Certificate
+                        <div class="logos">
+                            <img src="images/linkedin.png" alt="Logo 1">
+                            <img src="images/facebook.png" alt="Logo 2">
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="Docker_Foundations_Certificate">
+                    <div class="certificate">Docker Foundations Professional Certificate
+                        <div class="logos">
+                            <img src="images/linkedin.png" alt="Logo 1">
+                            <img src="images/facebook.png" alt="Logo 2">
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="TRL_Technology_Readiness">
+                    <div class="certificate">TRL Technology readiness levels
+                        <div class="logos" style="bottom: 5px;">
+                            <img src="images/linkedin.png" alt="Logo 1">
+                            <img src="images/facebook.png" alt="Logo 2">
+                        </div>
+                    </div>
+                </li>
+                
+                <li id="Explore_Career_Web_Developer">
+                    <div class="certificate">Explore a career as a web developer
+                        <div class="logos" style="bottom: 5px;">
+                            <img src="images/linkedin.png" alt="Logo 1">
+                            <img src="images/facebook.png" alt="Logo 2">
+                        </div>
+                    </div>
+                </li>
+                
 
-                <li class="certificate">CERTIFICADO DE DESARROLLO WEB</li>
-                <li class="certificate">CERTIFICADO DE PROGRAMACIÓN EN PYTHON</li>
-                <li class="certificate">Certificado en Gestión de Proyectos</li>
-                <li class="certificate">Certificado en Gestión de Proyectos 3</li>
             </ul>
             </div>
             </div>
@@ -90,6 +155,22 @@
                 <p>Descripción: Mi sitio web personal para mostrar mi portafolio.</p>
                 <a href="proyecto3.html" class="custom-link">Ver más</a>
             </div>
+            <div class="project">
+                <h3>Proyecto 3: Sitio Web Personal</h3>
+                <p>Descripción: Mi sitio web personal para mostrar mi portafolio.</p>
+                <a href="proyecto3.html" class="custom-link">Ver más</a>
+                </div>
+                <div class="project">
+                    <h3>Proyecto 3: Sitio Web Personal</h3>
+                    <p>Descripción: Mi sitio web personal para mostrar mi portafolio.</p>
+                    <a href="proyecto3.html" class="custom-link">Ver más</a>
+                    </div>
+                    <div class="project">
+                        <h3>Proyecto 3: Sitio Web Personal</h3>
+                        <p>Descripción: Mi sitio web personal para mostrar mi portafolio.</p>
+                        <a href="proyecto3.html" class="custom-link">Ver más</a>
+                        </div>
+            
             </div>
         </section>
 
@@ -120,7 +201,7 @@
     <div id="footer-container"></div>
 
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
     <script>
 
         fetch('header.html')
@@ -135,6 +216,8 @@
             .then(data => {
                 document.getElementById('footer-container').innerHTML = data;
             });
+
+        
     </script>
 </body>
 </html>

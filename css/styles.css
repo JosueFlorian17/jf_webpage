@@ -104,6 +104,7 @@ h2{
     color: white;
     font-weight: bold;
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -113,7 +114,7 @@ h2{
 
 .certificate:hover {
     background-color: #006f6f;
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
 
 .logos {

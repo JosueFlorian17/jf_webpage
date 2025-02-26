@@ -1,6 +1,10 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     background-color:#79c9f9;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
 
 }
 main{
@@ -18,7 +22,6 @@ main{
     color: white;
     padding: 1%;
     display:flex;
-    width: 100%;
 }
 
 h2{
@@ -226,4 +229,15 @@ h2{
 .collaborator{
     width: 10%;
     height: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    flex-direction: row;
+    
+}
+.collaborator img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }

@@ -52,8 +52,18 @@ h2{
     font-weight: bold;
     color: rgb(0, 0, 0);
 }
-
-
+.quote-container button {
+    display: flex;
+    justify-content: center;
+    margin: 10% auto 0 auto;
+    background-color: #008b8b;
+    color: white;
+    border-width: 0;
+    padding: 2%;
+    border-radius: 1vh;
+    width: 30%;
+    font-weight: bold;
+}
 
 .personal-photo{
     width: 200px;

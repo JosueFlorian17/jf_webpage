@@ -5,10 +5,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Florián</title>
-    <link rel="stylesheet" href="css\styles.css">
+   
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+<style>
+    body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:#79c9f9;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
 
+}
+main{
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+    flex-grow: 1;
+    margin: 50px auto;
+    padding: 2% 4%;
+    border-radius: 8px;
+}
+
+.header-content{
+    background-color: #243c4a;
+    color: white;
+    padding: 1%;
+    display:flex;
+}
+
+h2{
+    font-size: (1.2rem, 2vw, 2.2rem);
+    font-weight: bold;
+    color: #008b8b;
+}
+
+.return-button{
+    width: 3%;
+    min-width: 30px;
+}
+
+
+.photo-and-quote{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 0;
+}
+
+.photo-container{
+    border-radius: 50%;
+}
+
+.motivational-quote{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.quote-container button {
+    display: flex;
+    justify-content: center;
+    margin: 10% auto 0 auto;
+    background-color: #008b8b;
+    color: white;
+    border-width: 0;
+    padding: 2%;
+    border-radius: 1vh;
+    width: 30%;
+    font-weight: bold;
+}
+
+.personal-photo{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experiencia {
+  background-color: #f9f9f9;
+  padding: 1.8rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonials-section{
+    padding: 2%;
+    text-align: center;
+}
+.testimonials-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.testimonial{
+   font-style: italic;
+   background-color: #ffffff;
+   border-radius: 20px;
+   box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1);
+   padding: 2%;
+
+}
+.testimonial span{
+    color: #008b8b;
+    font-weight: bold;
+}
+
+
+
+.certificates-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 2% 0;
+}
+.certificates-list li{
+    cursor: pointer;
+    text-decoration: none;
+    list-style-type: none; 
+}
+
+.certificate {
+    background: #008b8b;
+    padding: 10% 10%;
+    text-decoration: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* Enable absolute positioning for child elements */
+}
+
+.certificate:hover {
+    background-color: #006f6f;
+    transform: scale(1.05);
+}
+
+.logos {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; 
+    display: flex;
+    gap: 5px;     
+}
+
+.logos img {
+    width: 20px;  
+    height: 20px;
+}
+
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 2% 0;
+}
+/* FOOTER*/
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white;
+    padding: 1%;
+    text-align: center;
+    width: 100%;
+    margin-left: -0.3%;
+}
+
+
+.social-icon{
+    width: 3%;
+    height: auto;
+    margin: 0.5%;
+    min-width: 30px;
+}   
+
+
+.custom-link{
+    color: #243c4a;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.project-modal
+{
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#modalTitle {
+    font-size: 24px;
+    color: #1875E8;
+}
+
+#modalMessage {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.close-button{
+    background-color: #1875E8;
+    color: white;
+    padding: 1%;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-width: 0px;
+}
+
+.collaborator{
+    width: 10%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    flex-direction: row;
+    
+}
+.collaborator img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+</style>
 <body>
     <!-- <div id="header-container"></div> -->
 
@@ -47,7 +320,7 @@
             <p>A lo largo de mi trayectoria, he cultivado una pasión por el desarrollo de software, una disciplina en la que aspiro a destacar mediante la combinación de aprendizaje continuo y experiencia práctica en proyectos innovadores.</p>
             <p>Me considero una persona proactiva, con habilidades para trabajar en equipo y una mentalidad orientada a la solución de problemas. Estoy siempre dispuesto a aprender y enfrentar nuevos desafíos.</p>
 
-            <div class="habilidades-tecnicas">
+            <div class="card">
             <h3>Habilidades Técnicas</h3>
             <ul>
                 <li>Nivel de  <b>Inglés - Avanzado</b></li>
@@ -294,8 +567,32 @@
 
     <div id="footer-container"></div>
 
+    <script>
+        function showModal(link) {
+    document.getElementById("modalIframe").src = link;
+    document.getElementById("customAlert").style.display = "flex";
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+  }
 
-    <script src="scripts.js"></script>
+  function closeModal() {
+
+    document.getElementById("customAlert").style.display = "none";
+    document.getElementById("modalIframe").src = "";
+    document.getElementById("closeModal").removeEventListener("click", closeModal);
+  }
+
+
+  function showProjectModal() {
+    document.getElementById("project").style.display = "flex";
+    document.getElementById("closeprojectModal").addEventListener("click", closeprojectModal);
+  }
+
+
+function closeprojectModal() {
+  document.getElementById("project").style.display = "none";
+  document.getElementById("closeprojectModal").removeEventListener("click", closeModal);
+}
+    </script>
     <script>
 
         fetch('header.html')

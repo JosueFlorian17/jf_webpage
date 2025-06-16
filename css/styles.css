@@ -237,8 +237,7 @@ h2{
 
 }
 .modal {
-    display: none; 
-    position: fixed;
+    display: none;
     z-index: 1000;
     left: 0;
     top: 0;
@@ -252,6 +251,8 @@ h2{
 }
 
 .modal-content {
+    align-items: center;
+    justify-content: center;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -259,7 +260,21 @@ h2{
     text-align: center;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.descripction_and_colaborators{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    gap: 20px;
+}
+
 
 #modalTitle {
     font-size: 24px;
@@ -273,13 +288,17 @@ h2{
 }
 
 .close-button{
+    position: absolute;
+    top: 16px;
+    right: 16px;
     background-color: #006f6f;
     color: white;
     padding: 1%;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 0;
     border-width: 0px;
+    width: auto;
 }
 
 .collaborator{

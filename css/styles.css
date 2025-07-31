@@ -428,3 +428,35 @@ h2{
     border-radius: 4px 4px 0 0;
   }
 }
+
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+.tag {
+    padding: 6px 14px;
+    border-radius: 16px;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #fff;
+    background: #4a90e2;
+    box-shadow: 0 2px 8px rgba(74,144,226,0.08);
+    transition: background 0.2s;
+    cursor: default;
+}
+.tag-python { background: #3572A5; }
+.tag-scrum { background: #F7B500; color: #222; }
+.tag-docker { background: #2496ED; }
+.tag-ai { background: #8e44ad; }
+.tag-kotlin { background: #F18E33; }
+.tag-devops { background: #2D9CDB; }
+.tag-powerbi { background: #F2C811; color: #222; }
+.tag-excel { background: #217346; }
+.tag-sql { background: #e67e22; }
+.tag-blender { background: #F5792A; }
+.tag:hover {
+    filter: brightness(0.95);
+}

@@ -1,0 +1,75 @@
+[
+  {
+    "id": "project1",
+    "title": "Proyecto 1: Tutor Matemático Académico con Sistema de Voz",
+    "description": "Desarrollo de un tutor interactivo que asiste a niños en el aprendizaje de matemáticas mediante preguntas y respuestas por voz, haciendo el proceso más amigable y didáctico. Utiliza Python junto con la librería SoundHelper para ofrecer una experiencia auditiva dinámica.",
+    "image": "/images/pfp.png",
+    "collaborators": [
+      { "name": "Josué Florián", "image": "/images/pfp.png" },
+      { "name": "Romina Pérez", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Camilla Pacora", "image": "/jf_webpage/images/pfp.png" }
+    ]
+  },
+  {
+    "id": "project2",
+    "title": "Proyecto 2: Analizador con Machine Learning de Retinopatías",
+    "description": "Desarrollo de un modelo de machine learning capaz de clasificar imágenes médicas en casos positivos o negativos de retinopatías. El sistema fue implementado en Python, utilizando técnicas de inteligencia artificial y librerías de análisis de imágenes. Logramos alcanzar una precisión del 90% y redactar un artículo académico sobre el proyecto.",
+    "image": "/images/pfp.png",
+    "collaborators": [
+      { "name": "José Cueva", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Bruno Gavidia", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Arny Salazar", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Edwin Jara", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Josué Florián", "image": "/images/pfp.png" }
+    ]
+  },
+  {
+    "id": "project3",
+    "title": "Proyecto 3: VentusSolaris Analyzer",
+    "description": "Proyecto interdisciplinario enfocado en la medición de irradiancia solar y velocidad del viento mediante módulos sensores conectados a dispositivos IoT. El sistema recopila datos en distintos puntos de una zona para evaluar la viabilidad de instalar generadores eléctricos. Se utilizó comunicación por ondas de radio, dispositivos ESP32 y una plataforma web para visualizar informes técnicos de viabilidad. El sistema fue desplegado en zonas rurales y ha sido patentado.",
+    "image": "/images/pfp.png",
+    "collaborators": [
+      { "name": "Cindy Pérez", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Romina Pérez", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Maylin Vásquez", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Edwin Jara", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Josué Florián", "image": "/images/pfp.png" }
+    ]
+  },
+  {
+    "id": "project4",
+    "title": "Proyecto 4: VitalEcoPower",
+    "description": "Propuesta de una solución energética sostenible para la comunidad de Colcabamba mediante un generador móvil de energía hidráulica de bajo costo. Se utilizó un caudalímetro GPI TM050-N junto con sensores conectados a microcontroladores ESP32 y Arduino para medir el caudal de ríos aledaños, evaluando su potencial para alimentar una microcentral hidroeléctrica. El sistema fue complementado con comunicación por ondas de radio y análisis de datos en Excel para determinar la viabilidad técnica de la solución.",
+    "image": "/images/pfp.png",
+    "collaborators": [
+      { "name": "Cindy Pérez", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Jordan Nieves", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Sergio Salazar", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Alessandra Ugarte", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Josué Florián", "image": "/images/pfp.png" }
+    ]
+  },
+  {
+    "id": "project5",
+    "title": "Proyecto 5: Studyhive",
+    "description": "Plataforma educativa que adapta herramientas de estudio personalizadas según el estilo de aprendizaje del usuario, determinado mediante un formulario validado con respaldo científico. Ofrece motivación mediante música y frases inspiradoras, visualización del progreso comunitario, retos semanales y gamificación para aumentar la productividad. También permite un seguimiento detallado del tiempo de estudio total.\n\nEl proyecto fue presentado en concursos de innovación y emprendimiento, alcanzando la fase de semifinales gracias a su enfoque integral y personalizable en el estudio.",
+    "image": "/images/pfp.png",
+    "collaborators": [
+      { "name": "Leily Llanos", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Bruno Gavidia", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Víctor Huarcaya", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Edwin Jara", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Josué Florián", "image": "/images/pfp.png" }
+    ]
+  },
+  {
+    "id": "project6",
+    "title": "Proyecto 6: HereDocs",
+    "description": "Plataforma web desarrollada como parte de una pasantía en la Escuela de Ingeniería, diseñada para asistir a estudiantes universitarios en el proceso de matrícula. Permite buscar rápidamente los sílabos de los cursos del siguiente ciclo académico y genera un plan de estudios personalizado considerando cursos pendientes, requisitos y restricciones curriculares institucionales. Su objetivo es optimizar la planificación académica individual y reducir errores durante la matrícula.\n\nSe integró exitosamente al sistema de la universidad, generando una mejora significativa en la experiencia estudiantil y aumentando el nivel de satisfacción con el proceso de matrícula.",
+    "image": "/images/pfp.png",
+    "collaborators": [
+      { "name": "Jhunior Herrera", "image": "/jf_webpage/images/pfp.png" },
+      { "name": "Josué Florián", "image": "/images/pfp.png" }
+    ]
+  }
+]

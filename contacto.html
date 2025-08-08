@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - JF</title>
+    <!-- Fuentes e íconos -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+    body {
+        min-height: 100vh;
+        background: linear-gradient(120deg, #f5f6fa 0%, #dbf4ff 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .main-flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3.5rem;
+        min-height: 100vh;
+        padding: 2.5rem 1rem;
+    }
+    /* ========== TREELINK/PROFILE ========== */
+    .treelink-container {
+        background: #fff;
+        border-radius: 22px;
+        box-shadow: 0 4px 32px rgba(45,137,239,0.12);
+        padding: 2.5rem 2.2rem 2rem 2.2rem;
+        max-width: 360px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0;
+        transition: box-shadow 0.2s;
+    }
+    .treelink-container:hover {
+        box-shadow: 0 8px 44px rgba(45,137,239,0.18);
+    }
+    .treelink-photo img {
+        border-radius: 50%;
+        width: 105px;
+        height: 105px;
+        object-fit: cover;
+        box-shadow: 0 3px 16px rgba(45,137,239,0.13);
+        margin-bottom: 1.1rem;
+        border: 3.5px solid #e1f5fe;
+        background: #f7fafd;
+        transition: transform 0.2s;
+    }
+    .treelink-photo img:hover {
+        transform: scale(1.07);
+    }
+    .treelink-title {
+        font-size: 1.34rem;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        margin-bottom: 0.2rem;
+        color: #184060;
+        text-align: center;
+    }
+    .treelink-desc {
+        font-size: 1.05rem;
+        color: #337fae;
+        margin-bottom: 1.4rem;
+        text-align: center;
+    }
+    .treelink-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.7rem;
+        margin-top: 1.6rem;
+    }
+    .treelink-btn {
+        display: flex;
+        align-items: center;
+        gap: 1.1rem;
+        background: #f0f7fb;
+        color: #184060;
+        border: none;
+        border-radius: 12px;
+        padding: 1.07rem 1.3rem;
+        font-size: 1.08rem;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 1px 6px rgba(45,137,239,0.07);
+        transition: background 0.2s, color 0.2s, transform 0.17s;
+        cursor: pointer;
+        outline: none;
+    }
+    .treelink-btn i {
+        font-size: 1.28rem;
+        min-width: 22px;
+        text-align: center;
+    }
+    .treelink-btn:hover, .treelink-btn:focus {
+        background: #008b8b;
+        color: #fff;
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 4px 16px rgba(45,137,239,0.13);
+    }
+
+    /* ========== TAG CAROUSEL ========== */
+    .tag-carousel-container {
+        width: 100%;
+        margin: 0.7rem 0 0.4rem 0;
+        display: flex;
+        justify-content: center;
+    }
+    .tag-carousel {
+        display: flex;
+        gap: 10px;
+        overflow: hidden;
+        justify-content: center;
+        min-height: 38px;
+        width: 95%;
+        max-width: 370px;
+    }
+    .tag {
+        padding: 7px 18px;
+        border-radius: 16px;
+        font-size: 0.98em;
+        font-weight: 600;
+        color: #fff;
+        background: #4a90e2;
+        box-shadow: 0 2px 8px rgba(74,144,226,0.09);
+        transition: transform 0.28s, box-shadow 0.28s, background 0.18s;
+        cursor: default;
+        user-select: none;
+        opacity: 0.97;
+        border: none;
+        outline: none;
+        animation: slideIn 0.7s;
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+    }
+    /* Colores por skill */
+    .tag-python   { background: #3572A5; }
+    .tag-scrum    { background: #F7B500; color: #222;}
+    .tag-docker   { background: #2496ED; }
+    .tag-ai       { background: #8e44ad; }
+    .tag-kotlin   { background: #F18E33; color: #222;}
+    .tag-devops   { background: #2D9CDB; }
+    .tag-powerbi  { background: #F2C811; color: #222;}
+    .tag-excel    { background: #217346; }
+    .tag-sql      { background: #e67e22; }
+    .tag-blender  { background: #F5792A; }
+
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateY(22px);}
+        to { opacity: 1; transform: translateY(0);}
+    }
+
+    /* ========== CAROUSEL SHOWCASE ========== */
+    .showcase-carousel {
+        width: 400px;
+        max-width: 97vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 5vh;
+    }
+    .carousel-images {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 20px;
+        box-shadow: 0 4px 24px rgba(45,137,239,0.14);
+        position: relative;
+        height: 310px;
+        background: #eaf5fc;
+    }
+    .carousel-track {
+        display: flex;
+        transition: transform 0.6s cubic-bezier(.83,0,.17,1);
+        height: 100%;
+    }
+    .carousel-item {
+        min-width: 100%;
+        height: 310px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.27s;
+        overflow: hidden;
+        display: flex;
+        align-items: stretch;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+        border-radius: 18px;
+    }
+    .carousel-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(20,36,54,0);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: background 0.32s, opacity 0.32s;
+    }
+    .carousel-item:hover img {
+        transform: scale(1.05) rotate(-1deg);
+        filter: brightness(0.75) blur(1.5px);
+    }
+    .carousel-item:hover .carousel-overlay {
+        background: rgba(24, 43, 74, 0.66);
+        opacity: 1;
+        pointer-events: all;
+    }
+    .carousel-text {
+        text-align: center;
+        padding: 1.1rem 0.7rem;
+        animation: fadeInUp 0.57s;
+        font-size: 1.05rem;
+    }
+    .carousel-text h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.55rem;
+        letter-spacing: 1px;
+    }
+    .carousel-text p {
+        font-size: 1.01rem;
+        color: #eaf5fc;
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(24px);}
+        to   { opacity: 1; transform: translateY(0);}
+    }
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1.1rem;
+        margin-top: 1.1rem;
+    }
+    .carousel-controls button {
+        background: #f0f7fb;
+        border: none;
+        border-radius: 50%;
+        color: #2d89ef;
+        font-size: 1.3rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        box-shadow: 0 2px 6px rgba(45,137,239,0.10);
+        cursor: pointer;
+        transition: background 0.18s, color 0.2s;
+    }
+    .carousel-controls button:hover, .carousel-controls button:focus {
+        background: #2d89ef;
+        color: #fff;
+    }
+  
+/* ========== 100% RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .main-flex-container {
+        flex-direction: column;
+        gap: 2.2rem;
+        align-items: center;
+        padding: 1.2rem 0.5rem;
+        min-height: unset;
+    }
+    .showcase-carousel {
+        width: 98vw;
+        max-width: 440px;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+    .carousel-images, .carousel-item {
+        height: 200px;
+    }
+    .treelink-container {
+        max-width: 98vw;
+        min-width: 0;
+        margin: 0 0 1.5rem 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-flex-container {
+        flex-direction: column;
+        gap: 1.3rem;
+        align-items: center;
+        padding: 0.5rem 0.1rem;
+    }
+    .showcase-carousel {
+        width: 80vw;
+        max-width: 100vw;
+        padding: 0 0.1rem;
+        margin: 0 0 0.7rem 0;
+    }
+    .carousel-images, .carousel-item {
+        height: 145px;
+        border-radius: 10px;
+    }
+    .carousel-item img {
+        border-radius: 10px;
+    }
+    .treelink-container {
+        padding: 1.3rem 0.7rem 1.2rem 0.7rem;
+        max-width: 99vw;
+        margin: 0 0 1rem 0;
+    }
+    .tag-carousel {
+        max-width: 96vw;
+        gap: 7px;
+    }
+    .tag {
+        padding: 6px 11px;
+        font-size: 0.91em;
+    }
+    .treelink-title {
+        font-size: 1.07rem;
+    }
+    .treelink-desc {
+        font-size: 0.97rem;
+        margin-bottom: 1rem;
+    }
+    .treelink-btn {
+        font-size: 0.98rem;
+        padding: 0.7rem 0.7rem;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="main-flex-container">
+
+    <!-- Perfil + tags + redes -->
+    <div class="treelink-container">
+        <div class="treelink-photo">
+            <img src="images/pfp.png" alt="Foto de perfil">
+        </div>
+
+        <!-- Tag carousel animado -->
+        <div class="tag-carousel-container">
+            <div class="tag-carousel">
+                <span class="tag tag-python">Python</span>
+                <span class="tag tag-scrum">Scrum</span>
+                <span class="tag tag-docker">Docker</span>
+                <span class="tag tag-ai">AI</span>
+                <span class="tag tag-kotlin">Kotlin</span>
+                <span class="tag tag-devops">DevOps</span>
+                <span class="tag tag-powerbi">Power BI</span>
+                <span class="tag tag-excel">Excel</span>
+                <span class="tag tag-sql">SQL</span>
+                <span class="tag tag-blender">Blender</span>
+            </div>
+        </div>
+
+        <div class="treelink-title">Josué Florián</div>
+        <div class="treelink-desc">Encuéntrame en mis redes o contáctame aquí:</div>
+        <div class="treelink-links">
+            <a href="https://www.instagram.com/florianjosue.jpg/?igsh=NmJ4cTZ6M2xvMWZz" target="_blank" class="treelink-btn">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/josue-floriann-b2029a27a/" target="_blank" class="treelink-btn">
+                <i class="fab fa-linkedin"></i>
+                LinkedIn
+            </a>
+            <a href="mailto:josue.florian@upch.pe" class="treelink-btn">
+                <i class="fas fa-envelope"></i>
+                Email
+            </a>
+            <a href="https://wa.me/51904376308" target="_blank" class="treelink-btn">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp
+            </a>
+            <a href="https://github.com/JosueFlorian17" target="_blank" class="treelink-btn">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Carrusel de proyectos -->
+    <div class="showcase-carousel">
+        <div class="carousel-images">
+            <div class="carousel-track">
+                <!-- Proyecto 1 -->
+                <div class="carousel-item">
+                    <img src="/images/heredocs.png" alt="Proyecto 1">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <h3>Web para ONG</h3>
+                            <p>Landing page moderna y donaciones automáticas para una organización social.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="carousel-item">
+                    <img src="images/focus.png" alt="Proyecto 2">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <h3>E-commerce React</h3>
+                            <p>Tienda online con carrito, pagos y panel de administración.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="carousel-item">
+                    <img src="/images/ventus.png" alt="Proyecto 3">
+                    <div class="carousel-overlay">
+                        <div class="carousel-text">
+                            <h3>App Mobile</h3>
+                            <p>Gestión de hábitos y recordatorios con notificaciones push.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Puedes agregar más proyectos aquí -->
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button id="carouselPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+            <button id="carouselNext" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</div>
+<!-- Scripts: tag-carousel + carrusel proyectos -->
+<script>
+/* ==== TAG CAROUSEL ROTATION ==== */
+const tagCarousel = document.querySelector('.tag-carousel');
+const allTags = Array.from(tagCarousel.children);
+let tagIndex = 0;
+const visibleTags = 3;
+
+function rotateTags() {
+    tagCarousel.innerHTML = '';
+    for (let i = 0; i < visibleTags; i++) {
+        const tag = allTags[(tagIndex + i) % allTags.length].cloneNode(true);
+        tag.style.animation = 'slideIn 0.65s';
+        tagCarousel.appendChild(tag);
+    }
+    tagIndex = (tagIndex + 1) % allTags.length;
+}
+setInterval(rotateTags, 2100);
+rotateTags();
+/* ==== PROYECTOS CAROUSEL (AUTOMÁTICO) ==== */
+const track = document.querySelector('.carousel-track');
+const projectItems = Array.from(track.children);
+let currentIdx = 0;
+
+function updateCarousel() {
+    track.style.transform = `translateX(-${currentIdx * 100}%)`;
+}
+
+function autoRotateCarousel() {
+    currentIdx = (currentIdx + 1) % projectItems.length;
+    updateCarousel();
+}
+
+document.getElementById('carouselPrev').onclick = () => {
+    currentIdx = (currentIdx - 1 + projectItems.length) % projectItems.length;
+    updateCarousel();
+};
+document.getElementById('carouselNext').onclick = () => {
+    currentIdx = (currentIdx + 1) % projectItems.length;
+    updateCarousel();
+};
+
+// Start automatic rotation
+setInterval(autoRotateCarousel, 3000);
+
+updateCarousel();
+</script>
+</body>
+</html>
